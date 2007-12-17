@@ -9,7 +9,6 @@ Source0: %{name}-%{version}.tar.gz
 License: GPL
 Group: Text tools
 Summary: Interactive ASCII name and synonym chart
-BuildRoot: %{_tmppath}/%{name}-root
 
 %description
 The ascii utility provides easy conversion between various byte representations
