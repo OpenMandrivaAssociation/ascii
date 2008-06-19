@@ -1,4 +1,4 @@
-%define release %mkrel 2
+%define release %mkrel 3
 %define version 3.8
 
 Name: ascii
