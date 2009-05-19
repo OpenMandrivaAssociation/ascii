@@ -1,4 +1,4 @@
-%define release %mkrel 3
+%define release %mkrel 4
 %define version 3.8
 
 Name: ascii
@@ -6,7 +6,7 @@ Version: %version
 Release: %release
 URL: http://www.catb.org/~esr/ascii/
 Source0: %{name}-%{version}.tar.gz
-License: GPL
+License: GPLv2
 Group: Text tools
 Summary: Interactive ASCII name and synonym chart
 BuildRoot: %{_tmppath}/%{name}-root
