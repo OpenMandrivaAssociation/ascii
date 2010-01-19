@@ -6,7 +6,7 @@ Version: %version
 Release: %release
 URL: http://www.catb.org/~esr/ascii/
 Source0: %{name}-%{version}.tar.gz
-License: GPLv2
+License: GPLv2+
 Group: Text tools
 Summary: Interactive ASCII name and synonym chart
 BuildRoot: %{_tmppath}/%{name}-root
