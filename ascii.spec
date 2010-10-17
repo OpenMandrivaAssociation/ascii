@@ -1,15 +1,12 @@
-%define release %mkrel 4
-%define version 3.8
-
-Name: ascii
-Version: %version
-Release: %release
-URL: http://www.catb.org/~esr/ascii/
-Source0: %{name}-%{version}.tar.gz
-License: GPLv2+
-Group: Text tools
-Summary: Interactive ASCII name and synonym chart
-BuildRoot: %{_tmppath}/%{name}-root
+Name:		ascii
+Version:	3.9
+Release:	%mkrel 1
+URL:		http://www.catb.org/~esr/ascii/
+Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
+License:	GPLv2+
+Group:		Text tools
+Summary:	Interactive ASCII name and synonym chart
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The ascii utility provides easy conversion between various byte representations
@@ -26,19 +23,17 @@ with no arguments it displays a handy small ASCII chart.
 %make CFLAGS="$RPM_OPT_FLAGS" ascii ascii.1
 
 %install
-[ "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf "$RPM_BUILD_ROOT"
+rm -rf %buildroot
 mkdir -p "$RPM_BUILD_ROOT"%{_bindir}
 mkdir -p "$RPM_BUILD_ROOT"%{_mandir}/man1/
 cp ascii "$RPM_BUILD_ROOT"%{_bindir}
 cp ascii.1 "$RPM_BUILD_ROOT"%{_mandir}/man1/
 
 %clean
-[ "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf "$RPM_BUILD_ROOT"
+rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
 %doc README COPYING
 %{_mandir}/man1/ascii.1*
 %{_bindir}/ascii
-
-
