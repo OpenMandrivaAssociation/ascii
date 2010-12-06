@@ -1,5 +1,5 @@
 Name:		ascii
-Version:	3.9
+Version:	3.10
 Release:	%mkrel 1
 URL:		http://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
