@@ -1,5 +1,5 @@
 Name:		ascii
-Version:	3.10
+Version:	3.11
 Release:	%mkrel 1
 URL:		http://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
@@ -24,10 +24,10 @@ with no arguments it displays a handy small ASCII chart.
 
 %install
 rm -rf %buildroot
-mkdir -p "$RPM_BUILD_ROOT"%{_bindir}
-mkdir -p "$RPM_BUILD_ROOT"%{_mandir}/man1/
-cp ascii "$RPM_BUILD_ROOT"%{_bindir}
-cp ascii.1 "$RPM_BUILD_ROOT"%{_mandir}/man1/
+mkdir -p %buildroot/%{_bindir}
+mkdir -p %buildroot/%{_mandir}/man1/
+cp ascii %buildroot/%{_bindir}
+cp ascii.1 %buildroot/%{_mandir}/man1/
 
 %clean
 rm -rf %buildroot
