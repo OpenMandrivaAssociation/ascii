@@ -1,6 +1,6 @@
 Name:		ascii
 Version:	3.11
-Release:	%mkrel 1
+Release:	%mkrel 2
 URL:		http://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
 License:	GPLv2+
@@ -23,11 +23,11 @@ with no arguments it displays a handy small ASCII chart.
 %make CFLAGS="$RPM_OPT_FLAGS" ascii ascii.1
 
 %install
-rm -rf %buildroot
 mkdir -p %buildroot/%{_bindir}
 mkdir -p %buildroot/%{_mandir}/man1/
-cp ascii %buildroot/%{_bindir}
-cp ascii.1 %buildroot/%{_mandir}/man1/
+install -m755 ascii -D %{buildroot}%{_bindir}/ascii
+install -m644 ascii.1 -D %{buildroot}%{_mandir}/man1/ascii.1
+
 
 %clean
 rm -rf %buildroot
