@@ -1,6 +1,6 @@
 Name:		ascii
 Version:	3.11
-Release:	%mkrel 2
+Release:	3
 URL:		http://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
 License:	GPLv2+
