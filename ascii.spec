@@ -1,7 +1,7 @@
 Name:		ascii
 Version:	3.18
 Release:	1
-URL:		http://www.catb.org/~esr/ascii/
+URL:		https://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
 License:	GPLv2+
 Group:		Text tools
