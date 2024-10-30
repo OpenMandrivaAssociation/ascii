@@ -1,5 +1,5 @@
 Name:		ascii
-Version:	3.18
+Version:	3.30
 Release:	1
 URL:		https://www.catb.org/~esr/ascii/
 Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
