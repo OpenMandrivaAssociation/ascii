@@ -8,6 +8,7 @@ Group:		Text tools
 Summary:	Interactive ASCII name and synonym chart
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
+BuildRequires:	make
 %description
 The ascii utility provides easy conversion between various byte representations
 and the American Standard Code for Information Interchange (ASCII) character
