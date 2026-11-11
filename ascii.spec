@@ -1,13 +1,14 @@
 Name:		ascii
-Version:	3.32
+Version:	3.33
 Release:	1
-URL:		https://www.catb.org/~esr/ascii/
-Source0:	http://www.catb.org/~esr/ascii/%name-%version.tar.gz
-License:	GPLv2+
+URL:		https://gitlab.com/esr/ascii
+Source0:	%{url}/-/archive/%{version}/%{name}-%{version}.tar.gz
+License:	BSD-2-Clause
 Group:		Text tools
 Summary:	Interactive ASCII name and synonym chart
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
+BuildRequires:	asciidoctor
 BuildRequires:	make
 %description
 The ascii utility provides easy conversion between various byte representations
@@ -21,7 +22,7 @@ with no arguments it displays a handy small ASCII chart.
 %setup -q
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS" ascii ascii.1
+%make_build CFLAGS="$RPM_OPT_FLAGS" ascii ascii.1
 
 %install
 mkdir -p %buildroot/%{_bindir}
@@ -29,12 +30,9 @@ mkdir -p %buildroot/%{_mandir}/man1/
 install -m755 ascii -D %{buildroot}%{_bindir}/ascii
 install -m644 ascii.1 -D %{buildroot}%{_mandir}/man1/ascii.1
 
-
-%clean
-rm -rf %buildroot
-
 %files
 %defattr(-,root,root)
-%doc README COPYING
+%doc README.adoc
+%license COPYING
 %{_mandir}/man1/ascii.1*
 %{_bindir}/ascii
